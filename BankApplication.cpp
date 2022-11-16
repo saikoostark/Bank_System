@@ -27,7 +27,7 @@ void BankAppplication::set_data(){
 		file <<users[i].second->get_ID()<<',';
 		file <<users[i].second->get_balance()<<',';
 		file << users[i].first.get_name()<< ',';
-		file << users[i].first.is_basic()<< ',';
+		file << users[i].first.basic_saving()<< ',';
 		file << users[i].first.get_address()<< ',';
 		file << users[i].first.get_number()<< '\n';		
 	}
@@ -65,10 +65,10 @@ ifstream file;
 		
 		
 		
-		if(basic){
+		if(basic == 1){
 			users.push_back({user , new BankAccount(ID , Balance)});
 		}
-		else{ 
+		else if(basic == 2 ){ 
 			users.push_back({user , new SavingBankAccount(ID , Balance)});
 		}	
 	}		

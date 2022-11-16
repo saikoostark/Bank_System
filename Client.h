@@ -23,7 +23,7 @@ class Client{
 	string get_name( );
 	string get_address();	
 	string get_number();
-	bool is_basic();
+	int basic_saving();
 	string get_accType();
 	
 };

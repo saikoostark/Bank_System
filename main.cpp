@@ -55,13 +55,15 @@ void menu(){
 	       		cout<< "Account ID: " << user["id"]
 	       		<< "\nAcocunt Type: " << user["type"]
 	       		<< "\nBalance: " << user["balance"] 
-	       		<< "Please Enter The Amount to Withdraw =========> ";
+	       		<< "\nPlease Enter The Amount to Withdraw =========> ";
 	       		cin >> balance;
 	       		if(bank.withdraw(ID , balance)){
 	       			user = bank.user_info(ID);
 	       			cout<< "Thank you\n"
 	       			     	<<"Account ID: " << user["id"]
-	       			     	 <<"\n New Balance: " << user["balance"];
+	       			     	 <<"\nNew Balance: " << user["balance"];
+	       		}else{
+	       			cout<< "\n sorry you have entered unavailabe amount";
 	       		}
 	       		
 	       	}
@@ -91,8 +93,7 @@ void menu(){
 	       }
 	  
 	       
-	  cout<< "\n\n";     
-	//system("clear");
+	  cout<< "\n\n";
 }
 
 

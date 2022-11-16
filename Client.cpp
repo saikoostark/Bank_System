@@ -31,7 +31,7 @@ string Client::get_address(){
 	}
 	
 	
-	bool Client::is_basic(){
+	int Client::basic_saving(){
 		return isBasic;
 	}
 	
@@ -39,5 +39,5 @@ string Client::get_address(){
 	if(isBasic == 1 )
 	return "Basic";
 	
-	return "Saving ";
+	return "Saving";
 	}
